@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="button_start_app">
+        <item name="android:fontFamily">@font/prompt_medium</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>
