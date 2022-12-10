@@ -10,7 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Sushi">
         <activity
-            android:name=".MainActivity"
+            android:name=".login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".poker.PokerActivity"
+            android:exported="true" />
+        <activity
+            android:name=".main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

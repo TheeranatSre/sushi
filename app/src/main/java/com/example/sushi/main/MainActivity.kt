@@ -1,7 +1,9 @@
-package com.example.sushi
+package com.example.sushi.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.sushi.login.LoginActivity
 import java.lang.NullPointerException
 
 class MainActivity : AppCompatActivity() {
@@ -11,6 +13,7 @@ class MainActivity : AppCompatActivity() {
             this.supportActionBar!!.hide()
         } catch (e: NullPointerException) {
         }
-        setContentView(R.layout.login_screen)
+        val intentToLogin = Intent(this, LoginActivity::class.java)
+        startActivity(intentToLogin)
     }
 }
