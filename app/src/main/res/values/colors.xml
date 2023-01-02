@@ -7,7 +7,19 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-
     <color name="background_app">#FF313131</color>
     <color name="primary">#FF32A652</color>
+
+    <!--  Background Colors -->
+    <color name="black_po_80">#CC000000</color>
+    <color name="bg_grey">#F4F7FE</color>
+
+
+    <!--  Font Colors -->
+    <color name="font_dust">#8693BF</color>
+    <color name="font_grey">#3F4959</color>
+
+    <!--  CI Palette colors -->
+    <color name="light_blue">#99ABC6</color>
+
 </resources>
