@@ -1,11 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/mainFragment">
 
     <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.sushi.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.sushi.login.ui.main.LoginFragment"
-        android:label="LoginFragment" />
+        android:name="com.example.sushi.ui.main.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment" >
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sushi.ui.main.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_createRoomDialogFragment"
+            app:destination="@id/createRoomDialogFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_pokerRoomFragment"
+            app:destination="@id/pokerRoomFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/createRoomDialogFragment"
+        android:name="com.example.sushi.ui.main.CreateRoomDialogFragment"
+        android:label="fragment_create_room_dialog"
+        tools:layout="@layout/fragment_create_room_dialog" >
+        <action
+            android:id="@+id/action_createRoomDialogFragment_to_pokerRoomFragment"
+            app:destination="@id/pokerRoomFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/pokerRoomFragment"
+        android:name="com.example.sushi.ui.main.PokerRoomFragment"
+        android:label="poker_room_fragment"
+        tools:layout="@layout/poker_room_fragment" />
 </navigation>

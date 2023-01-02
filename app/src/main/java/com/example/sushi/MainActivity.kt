@@ -1,23 +1,22 @@
-package com.example.sushi.main
+package com.example.sushi
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import com.example.sushi.login.LoginActivity
-import java.lang.NullPointerException
+import com.example.sushi.ui.main.MainFragment
 
-class MainActivity : AppCompatActivity() {
-
+class MainActivity : AppCompatActivity(R.layout.main_activity) {
     private lateinit var navController: NavController
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        try {
-            this.supportActionBar!!.hide()
-        } catch (e: NullPointerException) {
-        }
-//        val intentToLogin = Intent(this, LoginActivity::class.java)
-//        startActivity(intentToLogin)
+        this.supportActionBar!!.hide()
+    }
+
+    fun showDialog() {
+        val fragmentManager = supportFragmentManager
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

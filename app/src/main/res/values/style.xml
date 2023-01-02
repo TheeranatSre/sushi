@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="button_start_app">
-        <item name="android:fontFamily">@font/prompt_medium</item>
+    <style name="text_paragraph">
+        <item name="android:fontFamily">@font/prompt_regular</item>
         <item name="android:textSize">14sp</item>
+    </style>
+    <style name="custom_outline_box_default" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/text_input_layout_stroke_color</item>
+        <item name="android:textColorHint">@color/light_blue</item>
+        <item name="hintTextColor">@color/light_blue</item>
+        <item name="android:textSize">16sp</item>
+        <item name="boxCornerRadiusBottomEnd">8dp</item>
+        <item name="boxCornerRadiusBottomStart">8dp</item>
+        <item name="boxCornerRadiusTopEnd">8dp</item>
+        <item name="boxCornerRadiusTopStart">8dp</item>
+    </style>
+    <style name="text_field">
+        <item name="android:fontFamily">@font/prompt_regular</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>
