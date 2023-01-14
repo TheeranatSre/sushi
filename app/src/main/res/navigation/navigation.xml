@@ -9,16 +9,18 @@
         android:id="@+id/mainFragment"
         android:name="com.example.sushi.ui.main.MainFragment"
         android:label="main_fragment"
-        tools:layout="@layout/main_fragment" >
+        tools:layout="@layout/main_fragment">
         <action
             android:id="@+id/action_mainFragment_to_loginFragment"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/mainFragment"
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.sushi.ui.main.LoginFragment"
         android:label="login_fragment"
-        tools:layout="@layout/login_fragment" >
+        tools:layout="@layout/login_fragment">
         <action
             android:id="@+id/action_loginFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
@@ -27,7 +29,7 @@
         android:id="@+id/homeFragment"
         android:name="com.example.sushi.ui.main.HomeFragment"
         android:label="home_fragment"
-        tools:layout="@layout/home_fragment" >
+        tools:layout="@layout/home_fragment">
         <action
             android:id="@+id/action_homeFragment_to_createRoomDialogFragment"
             app:destination="@id/createRoomDialogFragment" />
@@ -39,7 +41,7 @@
         android:id="@+id/createRoomDialogFragment"
         android:name="com.example.sushi.ui.main.CreateRoomDialogFragment"
         android:label="fragment_create_room_dialog"
-        tools:layout="@layout/fragment_create_room_dialog" >
+        tools:layout="@layout/fragment_create_room_dialog">
         <action
             android:id="@+id/action_createRoomDialogFragment_to_pokerRoomFragment"
             app:destination="@id/pokerRoomFragment" />
