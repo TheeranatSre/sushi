@@ -9,6 +9,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.sushi.R
 import com.example.sushi.databinding.MainFragmentBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class MainFragment : Fragment() {
 
@@ -26,10 +30,15 @@ class MainFragment : Fragment() {
         val fragmentBinding = MainFragmentBinding.inflate(inflater, container, false)
         binding = fragmentBinding
         viewModel = ViewModelProvider(this)[MainViewModel::class.java]
-        binding.message.text = "หน้าแรก"
-        binding.buttonNexPage.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_loginFragment)
+
+        CoroutineScope(Dispatchers.Main).launch {
+            loadData()
         }
         return fragmentBinding.root
+    }
+
+    suspend fun loadData() {
+        delay(2000L)
+        findNavController().navigate(R.id.action_mainFragment_to_loginFragment)
     }
 }

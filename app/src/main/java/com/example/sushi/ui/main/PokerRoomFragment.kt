@@ -39,7 +39,7 @@ class PokerRoomFragment : Fragment() {
                 override fun onAnimationEnd(animation: Animator?) {
                     super.onAnimationEnd(animation)
                     if (cardImg.drawable.constantState == resources.getDrawable(R.drawable.ic_card_background).constantState) {
-                        cardImg.setImageResource(R.drawable.ic_launcher_background)
+                        cardImg.setImageResource(R.drawable.ic_poker_background)
                     } else {
                         cardImg.setImageResource(R.drawable.ic_card_background)
                     }
